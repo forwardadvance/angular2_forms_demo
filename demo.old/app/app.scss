@@ -1,0 +1,14 @@
+$red: #f09;
+$baseFont: 10px;
+$fontScale: 1.5;
+
+app {
+  color:$red;
+  font-size: $baseFont;
+  h2 {
+    font-size:$baseFont * $fontScale
+  }
+  h1 {
+    font-size:$baseFont * $fontScale * $fontScale
+  }
+}

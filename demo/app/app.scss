@@ -1,0 +1,13 @@
+$red: #f00;
+$green: #0f0;
+$baseFont: 10px;
+$fontScale: 1.5;
+
+app {
+  input.ng-touched.ng-invalid {
+    background: lighten($red, 20%)
+  }
+  input.ng-touched.ng-valid {
+    background: lighten($green, 20%)
+  }
+}

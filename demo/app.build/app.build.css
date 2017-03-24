@@ -1,0 +1,7 @@
+app input.ng-touched.ng-invalid {
+  background: #ff6666; }
+
+app input.ng-touched.ng-valid {
+  background: #66ff66; }
+
+/*# sourceMappingURL=app.build.css.map*/
