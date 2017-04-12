@@ -4,10 +4,16 @@ import {Component} from '@angular/core';
     selector: 'template-form-demo',
     template: `
       <form #form="ngForm" (ngSubmit)="onSubmit()">
+        Form is valid {{form.valid}}
         <p>
           <label>email:</label>
-          <input name="email" type="email"
-            [(ngModel)]="user.email" required>
+          <input name="email"
+            type="email"
+            #email="ngModel"
+            [(ngModel)]="user.email"
+            required>
+            <span *ngIf="!email.valid">Email was not valid. Please enter an email!</span>
+
         </p>
         <p>
           <label>Password:</label>
@@ -17,7 +23,8 @@ import {Component} from '@angular/core';
         <p>
           <button [disabled]="!form.valid">Submit</button>
         </p>
-    </form>
+        {{user | json}}
+      </form>
     `
 })
 export class TemplateFormDemoComponent {

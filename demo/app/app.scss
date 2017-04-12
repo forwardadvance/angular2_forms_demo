@@ -5,9 +5,9 @@ $fontScale: 1.5;
 
 app {
   input.ng-touched.ng-invalid {
-    background: lighten($red, 20%)
+    background: lighten($red, 30%)
   }
   input.ng-touched.ng-valid {
-    background: lighten($green, 20%)
+    background: lighten($green, 30%)
   }
 }
