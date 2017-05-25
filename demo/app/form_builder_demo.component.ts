@@ -1,3 +1,6 @@
+let template = "<input type='" + password + "' formControlName="password">"
+
+
 // email: FormControl = new FormControl("", Validators.required);
 
 import {Component} from '@angular/core';
@@ -31,16 +34,17 @@ export class FormBuilderDemoComponent {
   user:any = {}
 
   form: FormGroup;
-  // email:FormControl = new FormControl("", Validators.required)
+  email:FormControl = new FormControl("", Validators.required)
 
   constructor(fb: FormBuilder) {
       this.form = fb.group({
-          "email": [this.user.email, Validators.required],
+          "email": this.email,
           "password":[this.user.password, Validators.required]
       });
   }
 
   onSubmit() {
     console.log(this.form.controls);
+    this.user.email = this.form.controls.email.value;
   }
 }

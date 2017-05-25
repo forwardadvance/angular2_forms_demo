@@ -13,13 +13,17 @@ import {Component} from '@angular/core';
             [(ngModel)]="user.email"
             required>
             <span *ngIf="!email.valid">Email was not valid. Please enter an email!</span>
-
+            <br />
+            Email dirty: {{email.dirty}}
+            <br />
+            Email value: {{email.value}}
         </p>
         <p>
           <label>Password:</label>
           <input name="password" type="password"
             [(ngModel)]="user.password" required>
         </p>
+        <input #catName (input)="cat=catName.value" [value]="cat">{{cat}}
         <p>
           <button [disabled]="!form.valid">Submit</button>
         </p>
